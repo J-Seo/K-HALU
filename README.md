@@ -33,7 +33,7 @@ $ git clone https://github.com/J-Seo/K-HALU.git
 # Requires Python >= 3.10.0, torch >= 2.1.0
 $ cd K-HALU
 $ pip install transformers==4.44.0
-$ pip install datasets == 2.22.0
+$ pip install datasets==2.22.0
 $ pip install peft==0.13.2
 ```
 
