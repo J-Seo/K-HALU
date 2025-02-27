@@ -10,7 +10,7 @@ K-HALU: Multiple Answer Korean Hallucination Benchmark for Large Language Models
 The **K-HALU** dataset will be available on AI-HUB in **March 2025**.  
 🔗 [Dataset Link (Coming Soon)](https://www.aihub.or.kr/aihubdata/extrlpltfomdata/list.do?currMenu=118&topMenu=100)
 
-- The K-HALU dataset can be freely downloaded and used **only by individuals and organizations approved by AI-HUB**, in accordance with its usage policy.
+- The K-HALU dataset can be downloaded and used **only by individuals and organizations approved by AI-HUB**, in accordance with its usage policy.
 - K-HALU has been developed and released in compliance with the **National Information Society Agency of Korea (NIA)**’s data usage policies and registration procedures.
 
 ---
