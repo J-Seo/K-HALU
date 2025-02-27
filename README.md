@@ -1,5 +1,5 @@
 # K-HALU
-K-HALU: Multiple Answer Korean Hallucination Benchmark for Large Language Models [[ICLR 2025](https://openreview.net/forum?id=VnLhUogHYE)]
+K-HALU: Multiple Answer Korean Hallucination Benchmark for Large Language Models [[Paper](https://openreview.net/forum?id=VnLhUogHYE)]
 
 *Jaehyung Seo and Heuiseok Lim* 
 
