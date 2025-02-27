@@ -5,7 +5,7 @@ We comply with the data copyright policy of the AI-HUB OPEN Dataset, and the fol
 1. Dataset Source and Copyright Compliance
 
 - K-HALU used datasets from The Open AI Dataset Project (AI-Hub, S. Korea).
-- All dataset-related information can be accessed through [AI-Hub](https://www.aihub.or.kr/).
+- All dataset-related information can be accessed through AI-Hub (https://www.aihub.or.kr/).
 
 2. Original Dataset and Funding Acknowledgment
 
@@ -14,7 +14,7 @@ We comply with the data copyright policy of the AI-HUB OPEN Dataset, and the fol
 
 3. Access and Usage Restrictions
 
-- The K-HALU benchmark dataset is disclosed on a limited basis only to users **authorized by NIA and affiliated institutions.
-- Access to the dataset requires mutual agreement with the National Information Society Agency (NIA) and its affiliated institutions.
+- The K-HALU dataset is available for download and use by individuals who agree to the terms regarding its intended usage and the AI-Hub data usage policy through the link provided by the authors.
+- Access to the dataset requires mutual agreement with the National Information Society Agency (NIA).
 
-For inquiries regarding dataset access and authorization, please contact the appropriate authorities at [AI-Hub](https://www.aihub.or.kr/).
+For dataset access and authorization inquiries, please contact the appropriate authorities at AI-Hub (https://www.aihub.or.kr/).
