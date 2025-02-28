@@ -3,7 +3,7 @@ K-HALU: Multiple Answer Korean Hallucination Benchmark for Large Language Models
 
 *Jaehyung Seo and Heuiseok Lim* 
 
-🏫 [NLP & AI Lab](https://blpkorea.cafe24.com/wp/), Korea University
+🏫 [NLP & AI Lab](https://nlp.korea.ac.kr/), Korea University
 
 ### 📊 Dataset Download
 
