@@ -19,7 +19,7 @@ The **K-HALU** dataset will be available on AI-HUB in **April 2025**.
 
 - **February 21, 2025**: Official GitHub repository for K-HALU is now open.  
 - **February 24 - March 2025**: The K-HALU dataset will be made available (via the link above).  
-- **March 2025**: Official evaluation scripts for K-HALU will be released.  
+- **April 2025**: Official evaluation scripts for K-HALU will be released.  
 
 ### 🛠️ Installation
 
