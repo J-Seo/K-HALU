@@ -40,6 +40,7 @@ $ pip install -e .
 ### 🚀 Usage
 
 This repository includes the evaluation script for the sample version of the K-HALU benchmark, available at [`J-Seo/k_halu_samples`](https://huggingface.co/datasets/J-Seo/k_halu_samples) on Hugging Face.
+
 ⚠️ Please note that the full version is currently pending upload to AI-HUB and may take some time.
 
 The `test.sh` script evaluates model performance using either logit-based scoring or exact match metrics.
@@ -60,7 +61,7 @@ lm_eval --model hf \
 
 Run the Evaluation
 ```bash
-$ cd K-HALU
+$ cd lm-evaluation-harness
 $ sh test.sh
 ```
 
