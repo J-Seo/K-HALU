@@ -1,0 +1,26 @@
+task: k_halu
+dataset_path: J-Seo/k_halu_samples
+dataset_name: null
+output_type: multiple_choice
+#training_split: train
+test_split: test
+process_docs: !function utils.process_docs_zero
+doc_to_text: "{{query}}"
+doc_to_target: "{{label}}"
+doc_to_choice: "{{choices}}"
+metric_list:
+  - metric: f1
+    aggregation: f1
+    higher_is_better: true
+  - metric: precision
+    aggregation: precision
+    higher_is_better: true
+  - metric: recall
+    aggregation: recall
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  - version: 0.0
+
