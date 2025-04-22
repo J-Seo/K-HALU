@@ -32,18 +32,71 @@ $ git clone https://github.com/J-Seo/K-HALU.git
 ```bash
 # Requires Python >= 3.10.0, torch >= 2.1.0
 $ cd K-HALU
-$ pip install transformers==4.44.0
-$ pip install datasets==2.22.0
-$ pip install peft==0.13.2
+$ pip install -r requirements.txt
+$ cd lm-evaluation-harness
+$ pip install -e .
 ```
 
 ### 🚀 Usage
 
-👷‍♂️ **Coming Soon**
+This repository includes the evaluation script for the sample version of the K-HALU benchmark, available at [`J-Seo/k_halu_samples`](https://huggingface.co/datasets/J-Seo/k_halu_samples) on Hugging Face.
+⚠️ Please note that the full version is currently pending upload to AI-HUB and may take some time.
+
+The `test.sh` script evaluates model performance using either logit-based scoring or exact match metrics.
+
+You can modify the .yaml and .py files under lm_eval/tasks/k_halu to match your own experimental environment or preferred evaluation method.
+
+To evaluate a model using the sample version of K-HALU:
+```bash
+lm_eval --model hf \
+--model_args pretrained="meta-llama/Llama-2-7b-chat-hf"  \
+--tasks k_halu \             # Use 'k_halu_em' for exact match evaluation
+--device cuda:0 \
+--batch_size 4 \
+--use_cache ./cache/llama2_samples \ # Enable caching for faster evaluation
+--log_samples \
+--output_path ./results/llama2_samples & # Save logs and results
+```
+
+Run the Evaluation
+```bash
+$ cd K-HALU
+$ sh test.sh
+```
+
+Below are sample outputs from running the benchmark with `LLaMA-2-7B-Chat`
+
+
+```bash
+hf (pretrained=meta-llama/Llama-2-7b-chat-hf), gen_kwargs: (), limit: None, num_fewshot: None, batch_size: 4
+|Tasks |Version|Filter|n-shot| Metric  |Value |   |Stderr|
+|------|-------|------|-----:|---------|-----:|---|-----:|
+|k_halu|Yaml   |none  |     0|f1       |0.4273|±  |0.0840|
+|      |       |none  |     0|precision|0.4672|±  |0.0852|
+|      |       |none  |     0|recall   |0.4300|±  |0.0943|
+|      |       |none  |     0|acc_norm |0.2857|±  |0.1010|
+
+
+hf (pretrained=meta-llama/Llama-2-7b-chat-hf), gen_kwargs: (), limit: None, num_fewshot: None, batch_size: 4
+|  Tasks  |Version|Filter|n-shot|Metric|Value |   |Stderr|
+|---------|-------|------|-----:|------|-----:|---|-----:|
+|k_halu_em|Yaml   |none  |     0|acc   |0.0476|±  |0.0476|
+```
+
+
 
 ### 📖 Citation
 
-👷‍♂️ **Coming Soon**
+```bash
+@inproceedings{
+seo2025khalu,
+title={K-{HALU}: Multiple Answer Korean Hallucination Benchmark for Large Language Models},
+author={Jaehyung Seo and Heuiseok Lim},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=VnLhUogHYE}
+}
+```
 
 ### 🙏 Acknowledgement
 K-HALU used datasets from The Open AI Dataset Project (AI-Hub, S. Korea). All dataset-related information can be accessed through AI-Hub (www.aihub.or.kr).
