@@ -3,18 +3,18 @@ lm_eval --model hf \
 --tasks k_halu \
 --device cuda:0 \
 --batch_size 4 \
---use_cache ./cache/llama2_samples_em \
+--use_cache ./cache/llama2_samples \
 --log_samples \
 --output_path ./results/llama2_samples &
 
-lm_eval --model hf \
---model_args pretrained="meta-llama/Meta-Llama-3-8B-Instruct" \
---tasks k_halu \
---device cuda:1 \
---batch_size 4 \
---use_cache ./cache/llama3_samples \
---log_samples \
---output_path ./results/llama3_samples &
+#lm_eval --model hf \
+#--model_args pretrained="meta-llama/Meta-Llama-3-8B-Instruct" \
+#--tasks k_halu \
+#--device cuda:1 \
+#--batch_size 4 \
+#--use_cache ./cache/llama3_samples \
+#--log_samples \
+#--output_path ./results/llama3_samples &
 
 #
 #lm_eval --model hf \
@@ -46,23 +46,21 @@ lm_eval --model hf \
 #--output_path ./results/exaone_samples &
 
 ## 생성
-#lm_eval --model hf \
-#--model_args pretrained="meta-llama/Llama-2-7b-chat-hf" \
-#--tasks k_halu_em \
-#--device cuda:0 \
-#--batch_size 4 \
-#--num_fewshot 0 \
-#--use_cache ./cache/llama2 \
-#--log_samples \
-#--output_path ./results/llama2_samples_em &
+lm_eval --model hf \
+--model_args pretrained="meta-llama/Llama-2-7b-chat-hf" \
+--tasks k_halu_em \
+--device cuda:1 \
+--batch_size 4 \
+--use_cache ./cache/llama2_samples \
+--log_samples \
+--output_path ./results/llama2_samples_em &
 #
 #lm_eval --model hf \
 #--model_args pretrained="meta-llama/Meta-Llama-3-8B-Instruct" \
 #--tasks k_halu_em \
 #--device cuda:1 \
 #--batch_size 4 \
-#--num_fewshot 0 \
-#--use_cache ./cache/llama3 \
+#--use_cache ./cache/llama3_samples \
 #--log_samples \
 #--output_path ./results/llama3_samples_em &
 ##
@@ -71,8 +69,7 @@ lm_eval --model hf \
 #--tasks k_halu_em \
 #--device cuda:1 \
 #--batch_size 4 \
-#--num_fewshot 0 \
-#--use_cache ./cache/kullm3 \
+#--use_cache ./cache/kullm3_samples \
 #--log_samples \
 #--output_path ./results/kullm3_samples_em &
 #
@@ -81,8 +78,7 @@ lm_eval --model hf \
 #--tasks k_halu_em \
 #--device cuda:0 \
 #--batch_size 4 \
-#--num_fewshot 0 \
-#--use_cache ./cache/mistral \
+#--use_cache ./cache/mistral_samples \
 #--log_samples \
 #--output_path ./results/mistral_samples_em &
 ##
@@ -91,7 +87,6 @@ lm_eval --model hf \
 #--tasks k_halu_em \
 #--device cuda:1 \
 #--batch_size 4 \
-#--num_fewshot 0 \
-#--use_cache ./cache/exaone \
+#--use_cache ./cache/exaone_samples \
 #--log_samples \
 #--output_path ./results/exaone_samples_em &
