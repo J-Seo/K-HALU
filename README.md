@@ -84,7 +84,39 @@ hf (pretrained=meta-llama/Llama-2-7b-chat-hf), gen_kwargs: (), limit: None, num_
 |k_halu_em|Yaml   |none  |     0|acc   |0.0476|±  |0.0476|
 ```
 
+### How to Use the AI-HUB Dataset
 
+Modify the `dataset_path` in `./K-HALU/lm-evaluation-harness/lm_eval/tasks/k_halu/k_halu.yaml` 
+to point to the downloaded file `k_halu_test_v1_1.jsonl`.
+
+```bash
+task: k_halu
+**dataset_path: !CustomPath/k_halu_test_v1_1.jsonl**
+dataset_name: null
+output_type: multiple_choice
+#training_split: train
+test_split: test
+process_docs: !function utils.process_docs_zero
+doc_to_text: "{{query}}"
+doc_to_target: "{{label}}"
+doc_to_choice: "{{choices}}"
+metric_list:
+  - metric: f1
+    aggregation: f1
+    higher_is_better: true
+  - metric: precision
+    aggregation: precision
+    higher_is_better: true
+  - metric: recall
+    aggregation: recall
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  - version: 0.0
+
+```
 
 ### 📖 Citation
 
