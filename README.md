@@ -57,7 +57,7 @@ To evaluate a model using the sample version of K-HALU:
 ```bash
 lm_eval --model hf \
 --model_args pretrained="meta-llama/Llama-2-7b-chat-hf"  \
---tasks k_halu \             # Use 'k_halu_em' for exact match evaluation
+--tasks k_halu_log \             # Use 'k_halu_em' for exact match evaluation
 --device cuda:0 \
 --batch_size 4 \
 --use_cache ./cache/llama2_samples \ # Enable caching for faster evaluation
@@ -92,11 +92,11 @@ hf (pretrained=meta-llama/Llama-2-7b-chat-hf), gen_kwargs: (), limit: None, num_
 
 ### How to Use the AI-HUB Dataset
 
-Modify the `dataset_path` in `./K-HALU/lm-evaluation-harness/lm_eval/tasks/k_halu/k_halu.yaml` 
+Modify the `dataset_path` in `./K-HALU/lm-evaluation-harness/lm_eval/tasks/k_halu/k_halu_logit.yaml` 
 to point to the downloaded file `k_halu_test_v1_1.jsonl`.
 
 ```bash
-task: k_halu
+task: k_halu_log
 **dataset_path: !CustomPath/k_halu_test_v1_1.jsonl**
 dataset_name: null
 output_type: multiple_choice
