@@ -52,7 +52,6 @@ To evaluate a model using the sample version of K-HALU:
 lm_eval --model hf \
 --model_args pretrained="meta-llama/Llama-2-7b-chat-hf"  \
 --tasks k_halu \             # Use 'k_halu_em' for exact match evaluation
---task_path lm_eval/tasks/k_halu/k_halu.yaml \
 --device cuda:0 \
 --batch_size 4 \
 --use_cache ./cache/llama2_samples \ # Enable caching for faster evaluation
