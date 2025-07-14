@@ -46,14 +46,14 @@ lm_eval --model hf \
 #--output_path ./results/exaone_samples &
 
 ## 생성
-lm_eval --model hf \
---model_args pretrained="meta-llama/Llama-2-7b-chat-hf" \
---tasks k_halu_em \
---device cuda:1 \
---batch_size 4 \
---use_cache ./cache/llama2_samples \
---log_samples \
---output_path ./results/llama2_samples_em &
+# lm_eval --model hf \
+# --model_args pretrained="meta-llama/Llama-2-7b-chat-hf" \
+# --tasks k_halu_em \
+# --device cuda:1 \
+# --batch_size 4 \
+# --use_cache ./cache/llama2_samples \
+# --log_samples \
+# --output_path ./results/llama2_samples_em &
 #
 #lm_eval --model hf \
 #--model_args pretrained="meta-llama/Meta-Llama-3-8B-Instruct" \
