@@ -1,4 +1,4 @@
-task: k_halu
+task: k_halu_log
 dataset_path: J-Seo/k_halu_samples
 dataset_name: null
 output_type: multiple_choice
