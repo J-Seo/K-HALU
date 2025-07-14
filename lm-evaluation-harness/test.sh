@@ -1,6 +1,6 @@
 lm_eval --model hf \
 --model_args pretrained="meta-llama/Llama-2-7b-chat-hf" \
---tasks k_halu \
+--tasks k_halu_log \
 --device cuda:0 \
 --batch_size 4 \
 --use_cache ./cache/llama2_samples \
@@ -9,7 +9,7 @@ lm_eval --model hf \
 
 #lm_eval --model hf \
 #--model_args pretrained="meta-llama/Meta-Llama-3-8B-Instruct" \
-#--tasks k_halu \
+#--tasks k_halu_log \
 #--device cuda:1 \
 #--batch_size 4 \
 #--use_cache ./cache/llama3_samples \
@@ -19,7 +19,7 @@ lm_eval --model hf \
 #
 #lm_eval --model hf \
 #--model_args pretrained="nlpai-lab/KULLM3" \
-#--tasks k_halu \
+#--tasks k_halu_log \
 #--device cuda:0 \
 #--batch_size 4 \
 #--use_cache ./cache/kullm3 \
@@ -28,7 +28,7 @@ lm_eval --model hf \
 #
 #lm_eval --model hf \
 #--model_args pretrained="mistralai/Mistral-Nemo-Instruct-2407" \
-#--tasks k_halu \
+#--tasks k_halu_log \
 #--device cuda:1 \
 #--batch_size 4 \
 #--use_cache ./cache/mistral \
@@ -38,7 +38,7 @@ lm_eval --model hf \
 #
 #lm_eval --model hf \
 #--model_args pretrained="LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct" \
-#--tasks k_halu \
+#--tasks k_halu_log \
 #--device cuda:0 \
 #--batch_size 4 \
 #--use_cache ./cache/exaone \
