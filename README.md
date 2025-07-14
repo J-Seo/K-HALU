@@ -20,8 +20,10 @@ The **K-HALU** dataset is available on **AI-HUB**.
 - **February 21, 2025**: The official GitHub repository for K-HALU is now open.  
 - **February 24 - March 2025**: The K-HALU dataset will be available (via the link above).  
 - **June 2025**: Official evaluation scripts for K-HALU will be released.
-- **July 14, 2025** Bug Fixes
+- **July 14, 2025**: Bug Fixes
+  
   `1. Bug where task_list was not recognized: fixed registry conflict by renaming k_halu.yaml to k_halu_logit.yaml and task name from k_halu to k_halu_log.`
+  
   `2. Applied distinction between normalized and non-normalized scores in the results.`
   
 ### 🛠️ Installation
