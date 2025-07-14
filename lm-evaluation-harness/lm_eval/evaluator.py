@@ -386,8 +386,8 @@ def evaluate(
                         "target": target,
                         "arguments": [req.args for req in requests],
                         "resps": [req.resps for req in requests],
-                        "pred_idx": sorted_indices[:len(target)],
-                        "match": set(target) == set(sorted_indices[:len(target)])
+                        # "pred_idx (RAW)": sorted_indices[:len(target)],
+                        # "match": set(target) == set(sorted_indices[:len(target)])
                         # "filtered_resps": [req.filtered_resps[key] for req in requests],
 
                     }
