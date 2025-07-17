@@ -24,8 +24,6 @@ The **K-HALU** dataset is available on **AI-HUB**.
   
   1. *Bug where `task_list` was not recognized*: fixed registry conflict by renaming k_halu.yaml to *`k_halu_logit.yaml`* and task name from k_halu to *`k_halu_log`*.
   
-  2. Applied distinction between `normalized and non-normalized` scores in the results.
-  
 ### 🛠️ Installation
 
 This repository partially adopts the evaluation methods from version **0.4.1** of [EleutherAI/lm-eval-harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.3.0) for evaluating K-HALU.
